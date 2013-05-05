@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<head>
+	<?php include('../config.php'); ?>
+	<title>Untitled 4</title>
+</head>
+
+<body>
+<?php echo "dddd"; ?>
+
+
+<form action="add_book.php" method="post" enctype="multipart/form-data">
+</a>รหัสหนังสือ <input type="text" name="ID_Book"/><br />
+ชื่อหนังสือ <input type="text" name="Na_Book"/><br />
+ราคา <input type="text" name="Va_Book"/><br />
+<?php $sql_Ca = mysqli_query($con, "SELECT * FROM bso_book;"); 
+$row = mysqli_fetch_array($sql_Ca);
+echo "test"."{$row['ID_Book']}";
+echo "dddddddddd";
+?>
+หมวดหมู่ <select  name="ID_Ca"/>
+            <option value="2">ทดสอบการใช้งาน</option>
+         </select><br />
+รูปภาพ<input type="file" name="fileUpload" id="file"/><br/>
+<input type="submit" name="submit" value="บันทึก"/>
+
+</form>
+</body>
+</html>
