@@ -18,7 +18,7 @@ echo "<tr style=\"background-color:#C2D9FE\"><th>รูปภาพ</th><th>ห�
 while ($row = mysqli_fetch_array($result)) {
   echo "<tr style=\"background-color:#F2F2F2\">";
   echo "<td><img height= 100 width=80 src=\"admin/images/{$row['images']}\" /> </td>";
- echo" <td> {$row['ID_Book']} </td>";
+  echo" <td> {$row['ID_Book']} </td>";
   echo "<td> {$row['Na_Book']} </td>";
   echo "<td> {$row['Na_Ca']} </td>";
   echo "<td align=\"right\"> {$row['Va_Book']} </td>";
